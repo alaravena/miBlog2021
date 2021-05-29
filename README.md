@@ -50,3 +50,12 @@ En el html del template de django, primero se debe cargar los archivos statics d
 Luego llamar al recurso usando
 
 {% static 'nombreApp/rut/del/recurso' %}
+
+7) Contexto -> envío de variables al template
+Como tercer parámetro de render, en views se puede enviar al template un diccionario con variables, por ejemplo
+contexto = {
+        'atributo': 'valor'
+    }
+    return render(request, 'core/home.html', contexto)
+
+Y para llamarlas en el template se utiliza {{ atributp }}
