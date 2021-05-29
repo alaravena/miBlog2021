@@ -38,3 +38,15 @@ En el archivo urls.py general del proyecto agregan
 path('', include('core.urls')),
 al urlpatterns
 Recuerden importar include, junto con path
+
+6) Archivos Estáticos
+Se debe crear una carpeta con la lógica similar a templates nombreApp/static/nombreApp, por ejemplo core/static/core.
+
+Dentro de esta carpeta crear una estructura ordenda con una carpeta css, otra js y otra img. También se puede agregar otra lib para librerías externas.
+
+En el html del template de django, primero se debe cargar los archivos statics de la app
+{% load static %}
+
+Luego llamar al recurso usando
+
+{% static 'nombreApp/rut/del/recurso' %}
