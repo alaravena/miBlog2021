@@ -2,4 +2,11 @@
 <h1>Hola mundo</h1>
 <p>Nombre: {{ nombre }}</p>
 <p>Edad: {{ edad }}</p>
+<p>Comida Favorita: {{ comidas.0 }}</p>
+<ol>
+    {% for comida in comidas %}
+        <li>{{ comida }}</li>
+    {% endfor %}
+</ol>
+
 <img src="{% static 'core/img/grogu.jpg' %}" alt="Grogu Lego" />
