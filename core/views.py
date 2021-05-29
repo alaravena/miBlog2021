@@ -19,3 +19,6 @@ def home(request):
         'hijo': hijo
     }
     return render(request, 'core/home.html', contexto)
+
+def blog(request):
+    return render(request, 'core/blog.html')
