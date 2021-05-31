@@ -2,6 +2,22 @@
 
 Proyecto de Programación web PGY3121 Duoc UC 2021
 
+## Para usar este repositorio
+
+Descargar o clonar, luego ejecutar la instalación de los paquetes de **requirements.txt** con:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Para crear el archivo requirements.txt
+
+Antes de enviar su propio proyecto, en la raíz del proyecto debe ejecutar:
+
+```bash
+pip freeze > requirements.txt
+```
+
 ## Crear proyecto django
 
 Por consola
@@ -171,7 +187,7 @@ Luego llamar al recurso usando
 {% static 'nombreApp/rut/del/recurso' %}
 ```
 
-## Envío de variables
+## 5.- Envío de variables
 
 Se utiliza desde el *views.py* en el tercer parámetro del render, llamado contexto, que es de tipo diccionario
 
@@ -183,3 +199,15 @@ contexto = {
 ```
 
 Y para llamarlas en el template se utiliza `{{ atributo }}`
+
+## 6.- Templates complejas
+
+En el template *blog.html* tenemos un ejemplo complejo de estructura html que requiere que se utilice archivos estáticos. Utilizando la platilla de <https://github.com/StartBootstrap/startbootstrap-clean-blog>. En el caso del proyecto semestral se debe tomar los html trabajados en unidades anteriores.
+
+- Primero se copia todo el código al archivo html dentro del sistema de templates de django.
+- Todos los archivos estáticos como css, js, imágenes y librerías que se llaman de forma local, se trasladan a las carpetas correspondientes dentro de static.
+- En el html del template se reemplaza todas las llamadas a archivos locales por el sistema de enrutamiento static
+- Se agrega la función que renderea el template en *views.py*
+- Se agrega la ruta que corresponda en *urls.py*
+
+[//]: # (Collectstatic)
